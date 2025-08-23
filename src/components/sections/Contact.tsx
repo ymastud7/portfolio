@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiMail, FiLinkedin, FiMapPin, FiCoffee, FiGithub, FiDownload } from "react-icons/fi";
+import { FiMail, FiLinkedin, FiMapPin, FiCoffee, FiGithub, FiFileText } from "react-icons/fi";
 import useScrollVisibility from "@/hooks/useScrollVisibility";
 import ContactForm from "./ContactForm";
 
@@ -31,7 +31,7 @@ const Contact = () => {
       description: "View my code repositories and contributions"
     },
     {
-      icon: <FiDownload className="text-lg w-6 h-6" />,
+      icon: <FiFileText className="text-lg w-6 h-6" />,
       title: "Resume",
       value: "Download PDF",
       action: "/yash_mastud.pdf",

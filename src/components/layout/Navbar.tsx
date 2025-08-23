@@ -61,7 +61,7 @@ const Navbar = () => {
         damping: 20
       }}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center max-w-full">
         <Link 
           href="#hero" 
           className="text-xl font-bold text-foreground flex items-center"

@@ -24,7 +24,7 @@ const Button = ({
   rel,
   ...props
 }: ButtonProps) => {
-  const baseClasses = 'apple-button flex items-center justify-center';
+  const baseClasses = 'apple-button flex items-center justify-center transition-all duration-300';
   
   const variantClasses = {
     primary: 'primary',

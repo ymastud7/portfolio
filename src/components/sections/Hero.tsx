@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiLinkedin, FiMail, FiDownload, FiGithub } from "react-icons/fi";
+import { FiLinkedin, FiMail, FiFileText, FiGithub } from "react-icons/fi";
 import { Button } from "@/components/ui";
 
 const Hero = () => {
@@ -149,48 +149,97 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center gap-6"
             variants={item}
           >
-            <Button 
-              href="https://www.linkedin.com/in/yash-mastud-3355a3189/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiLinkedin className="mr-2 text-lg" />
-              LinkedIn
-            </Button>
-            <Button 
-              href="mailto:mastud.yash7@gmail.com"
-              variant="email"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiMail className="mr-2 text-lg" />
-              Email
-            </Button>
-            <Button 
-              href="https://github.com/ymastud7"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="github"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiGithub className="mr-2 text-lg" />
-              GitHub
-            </Button>
-            <Button 
-              href="/yash_mastud.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiDownload className="mr-2 text-lg" />
-              Resume
-            </Button>
+            {/* Full buttons for larger screens */}
+            <div className="hidden sm:flex gap-6">
+              <Button 
+                href="https://www.linkedin.com/in/yash-mastud-3355a3189/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-primary/20 hover:bg-primary"
+              >
+                <FiLinkedin className="mr-2 text-lg" />
+                LinkedIn
+              </Button>
+              <Button 
+                href="mailto:mastud.yash7@gmail.com"
+                variant="email"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#EA4335]/20 hover:bg-[#EA4335]"
+              >
+                <FiMail className="mr-2 text-lg" />
+                Email
+              </Button>
+              <Button 
+                href="https://github.com/ymastud7"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="github"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#333]/20 hover:bg-[#333]"
+              >
+                <FiGithub className="mr-2 text-lg" />
+                GitHub
+              </Button>
+              <Button 
+                href="/yash_mastud.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-primary/20 hover:bg-primary"
+              >
+                <FiFileText className="mr-2 text-lg" />
+                Resume
+              </Button>
+            </div>
+            
+            {/* Icon-only buttons for mobile screens */}
+            <div className="flex sm:hidden justify-center gap-8">
+              <motion.a
+                href="https://www.linkedin.com/in/yash-mastud-3355a3189/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="apple-button primary p-4 rounded-full bg-primary/20 hover:bg-primary"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiLinkedin className="text-xl" />
+              </motion.a>
+              <motion.a
+                href="mailto:mastud.yash7@gmail.com"
+                className="apple-button email p-4 rounded-full bg-[#EA4335]/20 hover:bg-[#EA4335]"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiMail className="text-xl" />
+              </motion.a>
+              <motion.a
+                href="https://github.com/ymastud7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="apple-button github p-4 rounded-full bg-[#333]/20 hover:bg-[#333]"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiGithub className="text-xl" />
+              </motion.a>
+              <motion.a
+                href="/yash_mastud.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="apple-button primary p-4 rounded-full bg-primary/20 hover:bg-primary"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FiFileText className="text-xl" />
+              </motion.a>
+            </div>
           </motion.div>
         </motion.div>
       </div>
