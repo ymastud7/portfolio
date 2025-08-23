@@ -70,7 +70,6 @@ export default function RootLayout({
                 "addressLocality": "Mumbai",
                 "addressCountry": "India"
               },
-              "jobTitle": "Software Developer",
               "alumniOf": "University of Mumbai",
               "knowsAbout": ["React", "Next.js", "TypeScript", "JavaScript", "Product Management", "Full-stack Development"]
             })

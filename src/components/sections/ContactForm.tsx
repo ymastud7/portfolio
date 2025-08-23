@@ -55,6 +55,7 @@ const ContactForm = () => {
         throw new Error(result.message);
       }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
