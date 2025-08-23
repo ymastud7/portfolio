@@ -17,7 +17,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   id,
   animateOnce = true
 }) => {
-  const isVisible = useScrollVisibility(id || '', 0.75);
+  const isVisible = useScrollVisibility(id || '', 0.75, animateOnce);
 
   return (
     <motion.section

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, MotionProps } from 'framer-motion';
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement>, MotionProps {
+interface CardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, keyof MotionProps>, MotionProps {
   hoverEffect?: boolean;
 }
 

@@ -10,28 +10,28 @@ const Contact = () => {
 
   const contactMethods = [
     {
-      icon: <FiMail className="text-lg" />,
+      icon: <FiMail className="text-lg w-6 h-6" />,
       title: "Email",
       value: "mastud.yash7@gmail.com",
       action: "mailto:mastud.yash7@gmail.com",
       description: "For professional inquiries and collaboration opportunities"
     },
     {
-      icon: <FiLinkedin className="text-lg" />,
+      icon: <FiLinkedin className="text-lg w-6 h-6" />,
       title: "LinkedIn",
       value: "Yash Mastud",
       action: "https://www.linkedin.com/in/yash-mastud-3355a3189/",
       description: "Connect with me professionally and view my complete profile"
     },
     {
-      icon: <FiGithub className="text-lg" />,
+      icon: <FiGithub className="text-lg w-6 h-6" />,
       title: "GitHub",
       value: "ymastud7",
       action: "https://github.com/ymastud7",
       description: "View my code repositories and contributions"
     },
     {
-      icon: <FiDownload className="text-lg" />,
+      icon: <FiDownload className="text-lg w-6 h-6" />,
       title: "Resume",
       value: "Download PDF",
       action: "/yash_mastud.pdf",
@@ -103,8 +103,10 @@ const Contact = () => {
                       className="flex items-start p-4 rounded-lg hover:bg-muted/30 transition-all duration-300 group"
                       whileHover={{ y: -4 }}
                     >
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 text-primary group-hover:bg-primary group-hover:text-background transition-all duration-300">
-                        {method.icon}
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4 text-primary group-hover:bg-primary group-hover:text-background transition-all duration-300 flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6">
+                          {method.icon}
+                        </div>
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{method.title}</h3>
