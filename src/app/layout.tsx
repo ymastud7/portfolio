@@ -34,9 +34,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://yashmastud.vercel.app",
   },
-  verification: {
-    google: "DB6PN54JW7V7xICdliBBkuAU_C0UooVhNAC9mTfBpG8",
-  },
 };
 
 export default function RootLayout({
