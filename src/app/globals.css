@@ -49,6 +49,20 @@ body {
   line-height: 1.5;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Vinyl animation */
 @keyframes rotate {
   from {

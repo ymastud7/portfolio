@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://yashmastud.vercel.app",
   },
+  verification: {
+    google: "DB6PN54JW7V7xICdliBBkuAU_C0UooVhNAC9mTfBpG8",
+  },
 };
 
 export default function RootLayout({
@@ -60,7 +63,28 @@ export default function RootLayout({
               "sameAs": [
                 "https://www.linkedin.com/in/yash-mastud-3355a3189/",
                 "https://github.com/ymastud7"
-              ]
+              ],
+              "description": "Product-focused software developer with expertise in full-stack development, product management, and creating user-centric digital experiences.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mumbai",
+                "addressCountry": "India"
+              },
+              "jobTitle": "Software Developer",
+              "alumniOf": "University of Mumbai",
+              "knowsAbout": ["React", "Next.js", "TypeScript", "JavaScript", "Product Management", "Full-stack Development"]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Yash Mastud Portfolio",
+              "url": "https://yashmastud.vercel.app",
+              "description": "Portfolio of Yash Mastud, a product-focused software developer with expertise in full-stack development, product management, and creating user-centric digital experiences."
             })
           }}
         />
