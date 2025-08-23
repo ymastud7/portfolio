@@ -1,27 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { FiBook, FiAward, FiMapPin, FiStar } from "react-icons/fi";
+import { FiBook, FiMapPin, FiAward, FiStar } from "react-icons/fi";
+import useScrollVisibility from "@/hooks/useScrollVisibility";
 
 const Education = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("education");
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.75) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const isVisible = useScrollVisibility("education");
 
   const achievements = [
     {

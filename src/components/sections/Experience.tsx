@@ -1,27 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { FiBriefcase, FiMapPin, FiCalendar, FiTrendingUp } from "react-icons/fi";
+import useScrollVisibility from "@/hooks/useScrollVisibility";
 
 const Experience = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("experience");
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.75) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const isVisible = useScrollVisibility("experience");
 
   const experiences = [
     {

@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import useScrollVisibility from '@/hooks/useScrollVisibility';
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
@@ -16,27 +17,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   id,
   animateOnce = true
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = id ? document.getElementById(id) : null;
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const inView = rect.top <= window.innerHeight * 0.75;
-        
-        if (inView && !isVisible) {
-          setIsVisible(true);
-        } else if (!inView && !animateOnce) {
-          setIsVisible(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [id, isVisible, animateOnce]);
+  const isVisible = useScrollVisibility(id || '', 0.75);
 
   return (
     <motion.section
