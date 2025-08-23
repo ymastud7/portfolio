@@ -58,11 +58,6 @@ html, body {
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 /* Vinyl animation */
 @keyframes rotate {
   from {

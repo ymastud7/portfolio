@@ -62,10 +62,10 @@ const Education = () => {
           <motion.div 
             className="apple-card p-8"
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ 
               duration: 0.8,
-              delay: 0.2,
+              delay: isVisible ? 0.2 : 0,
               ease: "easeOut"
             }}
             whileHover={{ y: -8 }}
@@ -102,10 +102,10 @@ const Education = () => {
                     key={index}
                     className="flex items-start"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ 
                       duration: 0.6,
-                      delay: 0.4 + index * 0.1,
+                      delay: isVisible ? 0.4 + index * 0.1 : 0,
                       ease: "easeOut"
                     }}
                   >

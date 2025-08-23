@@ -126,10 +126,10 @@ const Leadership = () => {
                   key={index} 
                   className="apple-card p-7"
                   initial={{ opacity: 0, y: 30 }}
-                  animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ 
                     duration: 0.8,
-                    delay: index * 0.2,
+                    delay: isVisible ? index * 0.2 : 0,
                     ease: "easeOut"
                   }}
                   whileHover={{ y: -10 }}
@@ -153,10 +153,10 @@ const Leadership = () => {
                         key={i} 
                         className="flex items-start"
                         initial={{ opacity: 0, x: -20 }}
-                        animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ 
                           duration: 0.6,
-                          delay: (index * 0.2) + (i * 0.1),
+                          delay: isVisible ? (index * 0.2) + (i * 0.1) : 0,
                           ease: "easeOut"
                         }}
                       >
