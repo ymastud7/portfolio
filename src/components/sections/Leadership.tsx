@@ -129,7 +129,7 @@ const Leadership = () => {
             </h2>
             <div className="h-1 w-24 bg-primary mx-auto mb-8 rounded-full"></div>
             <p className="text-foreground/80 max-w-2xl mx-auto">
-              Beyond technical skills, I've led teams and initiatives that created lasting impact in academic and cultural communities.
+              Beyond technical skills, I&apos;ve led teams and initiatives that created lasting impact in academic and cultural communities.
             </p>
           </div>
           

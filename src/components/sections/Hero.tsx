@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiLinkedin, FiMail } from "react-icons/fi";
+import { Button } from "@/components/ui";
 
 const Hero = () => {
   const container = {
@@ -148,26 +149,26 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center gap-6"
             variants={item}
           >
-            <motion.a 
+            <Button 
               href="https://www.linkedin.com/in/yash-mastud-3355a3189/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="apple-button primary flex items-center justify-center"
+              variant="primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FiLinkedin className="mr-2 text-lg" />
               Connect on LinkedIn
-            </motion.a>
-            <motion.a 
+            </Button>
+            <Button 
               href="mailto:mastud.yash7@gmail.com"
-              className="apple-button secondary flex items-center justify-center"
+              variant="secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FiMail className="mr-2 text-lg" />
               Send Email
-            </motion.a>
+            </Button>
           </motion.div>
         </motion.div>
       </div>

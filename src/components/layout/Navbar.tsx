@@ -60,7 +60,6 @@ const Navbar = () => {
         stiffness: 100,
         damping: 20
       }}
-      style={{ transform: 'scale(0.9)', transformOrigin: 'top', width: '111.11%', marginLeft: '-5.56%' }} /* 90% size scaling */
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link 
@@ -102,14 +101,14 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-foreground focus:outline-none p-1.5 rounded-lg hover:bg-muted/50"
+          className="md:hidden text-foreground focus:outline-none p-4 rounded-lg hover:bg-muted/50"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          <div className="w-5 h-5 flex flex-col justify-between">
-            <span className={`block h-0.5 w-5 bg-foreground transform transition duration-500 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`block h-0.5 w-5 bg-foreground transition duration-500 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-            <span className={`block h-0.5 w-5 bg-foreground transform transition duration-500 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <div className="relative w-5 h-5 flex items-center justify-center">
+            <span className={`block absolute h-0.5 w-5 bg-foreground transform transition duration-500 ease-in-out ${isMenuOpen ? 'rotate-45' : '-translate-y-1.5'}`}></span>
+            <span className={`block absolute h-0.5 w-5 bg-foreground transition duration-500 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block absolute h-0.5 w-5 bg-foreground transform transition duration-500 ease-in-out ${isMenuOpen ? '-rotate-45' : 'translate-y-1.5'}`}></span>
           </div>
         </button>
       </div>

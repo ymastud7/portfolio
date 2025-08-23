@@ -1,28 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { FiBox, FiBarChart2, FiCode, FiUsers } from "react-icons/fi";
+import { Card, SectionTitle, AnimatedSection, SkillChip } from "@/components/ui";
 
 const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.getElementById("skills");
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.75) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const skillCategories = [
     {
       title: "Product Management",
@@ -95,7 +77,7 @@ const Skills = () => {
   };
 
   return (
-    <section 
+    <AnimatedSection 
       id="skills" 
       className="pt-15 pb-20 px-4 relative bg-background border-y border-border/30"
     >
@@ -107,38 +89,29 @@ const Skills = () => {
       </div>
       
       <div className="container mx-auto max-w-6xl relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ 
-            duration: 0.9,
-            ease: "easeOut"
-          }}
-        >
-          <div className="text-center mb-12">
-            <h2 className="section-title justify-center">
-              Skills & Expertise
-            </h2>
-            <div className="h-1 w-24 bg-primary mx-auto mb-8 rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skillCategories.map((category, index) => {
-              const colorClasses = getColorClasses(category.color);
-              
-              return (
-                <motion.div 
-                  key={index} 
-                  className="apple-card p-7"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                  transition={{ 
-                    duration: 0.7,
-                    delay: index * 0.15,
-                    ease: "easeOut"
-                  }}
-                  whileHover={{ y: -8 }}
-                >
+        <div className="text-center mb-12">
+          <SectionTitle className="justify-center">
+            Skills & Expertise
+          </SectionTitle>
+          <div className="h-1 w-24 bg-primary mx-auto mb-8 rounded-full"></div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((category, index) => {
+            const colorClasses = getColorClasses(category.color);
+            
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.7,
+                  delay: index * 0.15,
+                  ease: "easeOut"
+                }}
+              >
+                <Card className="p-7" hoverEffect>
                   <div className="flex items-center mb-4">
                     <div className={`mr-4 p-3 rounded-full ${colorClasses.bg} ${colorClasses.text}`}>
                       {category.icon}
@@ -151,32 +124,31 @@ const Skills = () => {
                   
                   <div className="flex flex-wrap justify-center mt-5">
                     {category.skills.map((skill, skillIndex) => (
-                      <motion.span 
+                      <motion.div
                         key={skillIndex}
-                        className={`skill-chip ${colorClasses.bg} ${colorClasses.text} ${colorClasses.border} ${colorClasses.hover}`}
                         initial={{ opacity: 0, scale: 0.8 }}
-                        animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ 
                           duration: 0.5,
                           delay: (index * 0.15) + (skillIndex * 0.07),
                           ease: "easeOut"
                         }}
-                        whileHover={{ 
-                          y: -3,
-                          boxShadow: `0 6px 12px rgba(var(--${category.color}-rgb, 0, 113, 227), 0.2)`
-                        }}
                       >
-                        {skill}
-                      </motion.span>
+                        <SkillChip 
+                          className={`${colorClasses.bg} ${colorClasses.text} ${colorClasses.border} ${colorClasses.hover}`}
+                        >
+                          {skill}
+                        </SkillChip>
+                      </motion.div>
                     ))}
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
+                </Card>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 

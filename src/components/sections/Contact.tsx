@@ -72,7 +72,7 @@ const Contact = () => {
         >
           <div className="text-center mb-12">
             <h2 className="section-title justify-center">
-              Let's Connect
+              Let&apos;s Connect
             </h2>
             <div className="h-1 w-24 bg-primary mx-auto mb-8 rounded-full"></div>
           </div>
@@ -93,8 +93,8 @@ const Contact = () => {
             </div>
             
             <p className="mb-8 text-foreground/90 max-w-2xl mx-auto">
-              I'm always excited to discuss new projects, creative ideas, or opportunities to be part of your vision. 
-              Whether you have a question or just want to say hi, I'll do my best to get back to you!
+              I&apos;m always excited to discuss new projects, creative ideas, or opportunities to be part of your vision. 
+              Whether you have a question or just want to say hi, I&apos;ll do my best to get back to you!
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">

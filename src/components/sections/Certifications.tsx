@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FiAward, FiGlobe, FiStar, FiBook } from "react-icons/fi";
+import { FiBook, FiGlobe, FiStar } from "react-icons/fi";
 
 const Certifications = () => {
   const [isVisible, setIsVisible] = useState(false);
