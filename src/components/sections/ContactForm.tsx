@@ -38,7 +38,7 @@ const ContactForm = () => {
 
     try {
       const formData = new FormData(e.target as HTMLFormElement);
-      formData.append("access_key", "238c7741-0461-4ad4-93fc-be53e94ed503");
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -66,7 +66,11 @@ const ContactForm = () => {
       <h3 className="text-2xl font-bold mb-6 text-center">Send me a message</h3>
       
       <form onSubmit={handleSubmit} className="space-y-6">
-        <input type="hidden" name="access_key" value="238c7741-0461-4ad4-93fc-be53e94ed503" /> {/* Replace with your actual Web3Forms access key */}
+        <input 
+          type="hidden" 
+          name="access_key" 
+          value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY"} 
+        />
         
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground/80">

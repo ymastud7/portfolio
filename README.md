@@ -41,6 +41,7 @@ src/
 - Node.js 18.x or later
 - npm, yarn, or pnpm
 
+
 ### Installation
 
 1. Clone the repository:
@@ -54,12 +55,17 @@ cd portfolio
 npm install
 ```
 
-3. Run the development server:
+3. Create a `.env.local` file with your Web3Forms API key:
+```bash
+echo "NEXT_PUBLIC_WEB3FORMS_KEY=your_actual_key_here" > .env.local
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ### Building for Production
 
@@ -68,18 +74,23 @@ npm run build
 npm start
 ```
 
+## 🚀 Deployment
+
+Make sure to set the following environment variable in your deployment platform:
+
+- `NEXT_PUBLIC_WEB3FORMS_KEY` - Your Web3Forms API key
+
 ## 📞 Contact
 
 For professional inquiries, you can reach me through:
 
 - **Email**: [mastud.yash7@gmail.com](mailto:mastud.yash7@gmail.com)
 - **LinkedIn**: [Yash Mastud](https://www.linkedin.com/in/yash-mastud-3355a3189/)
-- **GitHub**: [yashmastud](https://github.com/yashmastud)
+- **GitHub**: [ymastud7](https://github.com/ymastud7/portfolio)
 
 ## 📄 Resume
 
-Download my complete professional resume in PDF format from the website or directly from `/public/yash_mastud.pdf`.
-
+Download my complete professional resume in PDF format from the website
 ## 🤝 Contributing
 
 While this is a personal portfolio project, suggestions and feedback are welcome. Please open an issue to discuss any proposed changes.
