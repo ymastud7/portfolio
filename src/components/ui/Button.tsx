@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, MotionProps } from 'framer-motion';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, MotionProps {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'github' | 'email' | 'resume';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   target?: string;
@@ -28,6 +28,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const variantClasses = {
       primary: 'primary',
       secondary: 'secondary',
+      github: 'github',
+      email: 'email',
+      resume: 'resume',
     };
     
     const sizeClasses = {

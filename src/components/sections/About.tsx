@@ -64,17 +64,20 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Card className="p-8">
-              <p className="text-foreground/90 leading-relaxed mb-6">
+              <h3 className="text-2xl font-bold mb-6">My Journey</h3>
+              <div className="space-y-5">
+                <p className="text-foreground/90 leading-relaxed text-base md:text-lg">
                   I&apos;m a product-focused software developer with a passion for creating solutions that make a real difference. With 2 years of experience spanning the entire product lifecycle, I specialize in translating complex business requirements into elegant technical implementations.
                 </p>
-              
-              <p className="text-foreground/90 leading-relaxed mb-6">
-                My approach combines technical expertise with strategic thinking, ensuring that every line of code contributes to both user satisfaction and measurable business outcomes. I thrive at the intersection of technology, design, and product strategy.
-              </p>
-              
-              <p className="text-foreground/90 leading-relaxed">
+                
+                <p className="text-foreground/90 leading-relaxed text-base md:text-lg">
+                  My approach combines technical expertise with strategic thinking, ensuring that every line of code contributes to both user satisfaction and measurable business outcomes. I thrive at the intersection of technology, design, and product strategy.
+                </p>
+                
+                <p className="text-foreground/90 leading-relaxed text-base md:text-lg">
                   When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, or perfecting my craft through continuous learning.
                 </p>
+              </div>
             </Card>
           </motion.div>
           

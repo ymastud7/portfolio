@@ -79,7 +79,7 @@ const Skills = () => {
   return (
     <AnimatedSection 
       id="skills" 
-      className="pt-15 pb-20 px-4 relative bg-background border-y border-border/30"
+      className="pt-20 pb-20 px-4 relative bg-background border-y border-border/30"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">

@@ -100,7 +100,7 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 45px; /* Adjusted for 90% navbar size (50px * 0.9) */
+  scroll-padding-top: 45px;
 }
 
 /* Custom scrollbar */
@@ -152,6 +152,16 @@ html {
   background: transparent;
   color: var(--primary);
   border-color: var(--border);
+}
+
+.apple-button.github {
+  background: #333;
+  color: white;
+}
+
+.apple-button.email {
+  background: #EA4335;
+  color: white;
 }
 
 .apple-button:hover {

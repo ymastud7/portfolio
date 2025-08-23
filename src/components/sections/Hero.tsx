@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiLinkedin, FiMail } from "react-icons/fi";
+import { FiLinkedin, FiMail, FiDownload, FiGithub } from "react-icons/fi";
 import { Button } from "@/components/ui";
 
 const Hero = () => {
@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden "
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
@@ -158,16 +158,38 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <FiLinkedin className="mr-2 text-lg" />
-              Connect on LinkedIn
+              LinkedIn
             </Button>
             <Button 
               href="mailto:mastud.yash7@gmail.com"
-              variant="secondary"
+              variant="email"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FiMail className="mr-2 text-lg" />
-              Send Email
+              Email
+            </Button>
+            <Button 
+              href="https://github.com/ymastud7"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="github"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiGithub className="mr-2 text-lg" />
+              GitHub
+            </Button>
+            <Button 
+              href="/yash_mastud.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiDownload className="mr-2 text-lg" />
+              Resume
             </Button>
           </motion.div>
         </motion.div>

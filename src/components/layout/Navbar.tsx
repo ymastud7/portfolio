@@ -15,7 +15,7 @@ const Navbar = () => {
       
       // Update active section based on scroll position
       const sections = ["hero", "about", "skills", "experience", "leadership", "education", "certifications", "contact"];
-      const scrollPosition = window.scrollY + 60; // Adjusted for smaller navbar and better section detection
+      const scrollPosition = window.scrollY + 60;
       
       for (const section of sections) {
         const element = document.getElementById(section);
